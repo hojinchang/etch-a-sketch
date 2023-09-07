@@ -1,3 +1,17 @@
 body {
     background-color: #e1dbd6;
 }
+
+.grid-container {
+    display: flex;
+    width: 600px;
+    height: 600px;
+    border-style: solid;
+    border-width: 3px;
+
+}
+
+.square {
+    margin: 0;
+    padding: 0;
+}
