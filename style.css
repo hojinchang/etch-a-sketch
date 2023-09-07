@@ -1,6 +1,30 @@
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #e1dbd6;
 }
+
+header {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  /* Center the child elements */
+    gap: 100px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
 
 .grid-container {
     display: flex;
@@ -8,6 +32,7 @@ body {
     height: 600px;
     border-style: solid;
     border-width: 3px;
+
 
 }
 
