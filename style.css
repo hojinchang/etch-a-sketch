@@ -11,8 +11,11 @@ body {
 header {
     text-align: center;
     font-size: 42px;
-    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin-bottom: 40px;
+    background-color: #EEE0C9;
+    color: #96B6C5;
 }
 
 h1 {
@@ -51,15 +54,6 @@ main {
     color: #ADC4CE;
     font-size: 20px;
 }
-
-/* .clear-button {
-    width: 150px;
-    height: 40px;
-    background-color: #F1F0E8;
-    border-radius: 7px;
-    color: #ADC4CE;
-    font-size: 20px;
-} */
 
 .slider-container {
     margin-top: 15px;
