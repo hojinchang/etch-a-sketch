@@ -3,7 +3,9 @@ const sliderInput = document.querySelector(".slider");
 const sliderText = document.querySelector(".slider-text");
 const clearButton = document.querySelector(".clear-button");
 const colourPicker = document.getElementById("colour-picker");
-const colouredTile = document.querySelector(".coloured-tile")
+const colouredTile = document.querySelector(".coloured-tile");
+const colourFillButton = document.querySelector(".colour-fill-button");
+const rainbowFillButton = document.querySelector(".rainbow-fill-button");
 
 
 function parseGrid (gridSize) {
@@ -40,6 +42,25 @@ function resetGrid(gridWidth, gridSize) {
     createGrid(gridWidth, gridSize);
 }
 
+function randomRGB() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    return [r, g, b]
+}
+
+function fillTiles(e, tileColour) {
+    if (e.target.classList.contains("tile")) {
+        if (fillMode === "colour") {
+            e.target.style.backgroundColor = tileColour;
+        } else if (fillMode ==="rainbow") {
+            rgb = randomRGB();
+            e.target.style.backgroundColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+        }
+    }
+}
+
 
 
 let gridSize = sliderInput.value;
@@ -47,23 +68,30 @@ const gridWidth = parseInt(getComputedStyle(gridContainer).width, 10);
 createGrid(gridWidth, gridSize);
 
 
+let fillMode = "colour";
+colourFillButton.addEventListener("click", function() {
+    fillMode = "colour";
+})
+
+rainbowFillButton.addEventListener("click", function() {
+    fillMode = "rainbow";
+})
+
+clearButton.addEventListener("click", function() {
+    resetGrid(gridWidth, gridSize);
+});
+
 sliderInput.addEventListener("input", function() {
     gridSize = sliderInput.value;
     resetGrid(gridWidth, gridSize);
 });
 
 
-let tileColour = "#000000"
+let tileColour = "#000000";
 colourPicker.addEventListener("input", function() {
     tileColour = colourPicker.value;
-})
+});
 
 gridContainer.addEventListener("mouseover", function(e) {
-    if (e.target.classList.contains("tile")) {
-        e.target.style.backgroundColor = tileColour;
-    }
-})
-
-clearButton.addEventListener("click", function() {
-    resetGrid(gridWidth, gridSize);
+    fillTiles(e, tileColour);
 });
