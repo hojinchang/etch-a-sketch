@@ -40,7 +40,6 @@ function resetGrid(gridWidth, gridSize) {
         gridContainer.removeChild(gridContainer.firstChild);
     }
 
-    sliderText.textContent = `${gridSize} x ${gridSize}`;
     createGrid(gridWidth, gridSize);
 }
 
@@ -98,6 +97,7 @@ clearButton.addEventListener("click", function() {
 
 sliderInput.addEventListener("input", function() {
     gridSize = sliderInput.value;
+    sliderText.textContent = `${gridSize} x ${gridSize}`;
     resetGrid(gridWidth, gridSize);
 });
 
