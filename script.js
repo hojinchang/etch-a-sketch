@@ -2,6 +2,8 @@ const gridContainer = document.querySelector(".grid-container");
 const sliderInput = document.querySelector(".slider");
 const sliderText = document.querySelector(".slider-text");
 const clearButton = document.querySelector(".clear-button");
+const colourPicker = document.getElementById("colour-picker");
+const colouredTile = document.querySelector(".coloured-tile")
 
 
 function parseGrid (gridSize) {
@@ -51,10 +53,14 @@ sliderInput.addEventListener("input", function() {
 });
 
 
+let tileColour = "#000000"
+colourPicker.addEventListener("input", function() {
+    tileColour = colourPicker.value;
+})
+
 gridContainer.addEventListener("mouseover", function(e) {
     if (e.target.classList.contains("tile")) {
-        e.target.classList.remove("tile");
-        e.target.classList.add("black-tile");
+        e.target.style.backgroundColor = tileColour;
     }
 })
 

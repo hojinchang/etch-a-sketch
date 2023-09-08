@@ -37,6 +37,12 @@ main {
     gap: 15px;
 }
 
+#colour-picker {
+    padding: 0;
+    width: 100px;
+    height: 70px;
+}
+
 .clear-button {
     width: 150px;
     height: 40px;
@@ -70,19 +76,11 @@ main {
     background-color: white;
 }
 
-.tile,
-.black-tile {
+.tile {
     margin: 0;
     padding: 0;
 }
 
-.tile {
-    background-color: white;
-}
-
-.black-tile {
-    background-color: black;
-}
 
 footer {
     background-color: #96B6C5;
