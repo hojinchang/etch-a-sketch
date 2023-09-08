@@ -6,25 +6,25 @@ function parseGrid (gridSize) {
     for (let i = 0; i < gridSize; i++) {
         const row = gridContainer.appendChild(document.createElement("div"));
         for (let j = 0; j < gridSize; j++) {
-            const square = document.createElement("div");
-            square.className = "square";
-            row.appendChild(square);
+            const tile = document.createElement("div");
+            tile.className = "tile";
+            row.appendChild(tile);
         }
     }
 }
 
-function adjustSquareSize(gridWidth, gridSize) {
-    const squares = document.querySelectorAll(".square");
-    const squareSize = gridWidth / gridSize;
+function adjusttileSize(gridWidth, gridSize) {
+    const tiles = document.querySelectorAll(".tile");
+    const tileSize = gridWidth / gridSize;
 
-    squares.forEach(square => {
-        square.style.cssText = `width: ${squareSize}px; height: ${squareSize}px;`
+    tiles.forEach(tile => {
+        tile.style.cssText = `width: ${tileSize}px; height: ${tileSize}px;`
     })
 }
 
 function createGrid(gridWidth, gridSize) {
     parseGrid(gridSize);
-    adjustSquareSize(gridWidth, gridSize);
+    adjusttileSize(gridWidth, gridSize);
 }
 
 function adjustGrid(gridWidth, gridSize) {
@@ -35,8 +35,6 @@ function adjustGrid(gridWidth, gridSize) {
     sliderText.textContent = `${gridSize} x ${gridSize}`;
     createGrid(gridWidth, gridSize);
 }
-
-
 
 
 
