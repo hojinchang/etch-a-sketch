@@ -2,12 +2,12 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #e1dbd6;
+    font-family: "Chivo", sans-serif;
 }
 
 header {
     text-align: center;
     font-size: 46px;
-    font-family: "Chivo", sans-serif;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -19,7 +19,7 @@ h1 {
 main {
     display: flex;
     align-items: center;
-    justify-content: flex-start;  /* Center the child elements */
+    justify-content: flex-start;
     gap: 100px;
     margin: 0 auto;
     padding: 0px;
@@ -31,6 +31,11 @@ main {
     align-items: center;
     justify-content: center;
     width: 200px;
+}
+
+.clear-button {
+    width: 100px;
+    height: 50px;
 }
 
 .grid-container {

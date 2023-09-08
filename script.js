@@ -1,6 +1,8 @@
 const gridContainer = document.querySelector(".grid-container");
 const sliderInput = document.querySelector(".slider");
 const sliderText = document.querySelector(".slider-text");
+const clearButton = document.querySelector(".clear-button");
+
 
 function parseGrid (gridSize) {
     for (let i = 0; i < gridSize; i++) {
@@ -55,3 +57,7 @@ gridContainer.addEventListener("mouseover", function(e) {
         e.target.classList.add("black-tile");
     }
 })
+
+clearButton.addEventListener("click", function() {
+    adjustGrid(gridWidth, gridSize);
+});
