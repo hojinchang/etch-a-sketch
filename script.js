@@ -29,7 +29,7 @@ function createGrid(gridWidth, gridSize) {
     adjusttileSize(gridWidth, gridSize);
 }
 
-function adjustGrid(gridWidth, gridSize) {
+function resetGrid(gridWidth, gridSize) {
     while (gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.firstChild);
     }
@@ -47,7 +47,7 @@ createGrid(gridWidth, gridSize);
 
 sliderInput.addEventListener("input", function() {
     gridSize = sliderInput.value;
-    adjustGrid(gridWidth, gridSize);
+    resetGrid(gridWidth, gridSize);
 });
 
 
@@ -59,5 +59,5 @@ gridContainer.addEventListener("mouseover", function(e) {
 })
 
 clearButton.addEventListener("click", function() {
-    adjustGrid(gridWidth, gridSize);
+    resetGrid(gridWidth, gridSize);
 });
