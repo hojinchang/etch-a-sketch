@@ -47,3 +47,11 @@ sliderInput.addEventListener("input", function() {
     gridSize = sliderInput.value;
     adjustGrid(gridWidth, gridSize);
 });
+
+
+gridContainer.addEventListener("mouseover", function(e) {
+    if (e.target.classList.contains("tile")) {
+        e.target.classList.remove("tile");
+        e.target.classList.add("black-tile");
+    }
+})

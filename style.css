@@ -36,8 +36,16 @@ main {
     background-color: white;
 }
 
-.tile {
+.tile,
+.black-tile {
     margin: 0;
     padding: 0;
+}
+
+.tile {
     background-color: white;
+}
+
+.black-tile {
+    background-color: black;
 }
