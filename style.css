@@ -53,6 +53,13 @@ main {
     border-radius: 7px;
     color: #ADC4CE;
     font-size: 20px;
+    transition: all 0.07s ease;
+}
+
+.button-hover {
+    transform: scale(1.1);
+    border-color: #F1F0E8;
+    box-shadow: 0 0 1rem #F1F0E8;
 }
 
 .slider-container {
@@ -69,6 +76,12 @@ main {
     margin-bottom: 10px;
 }
 
+
+
+
+
+
+
 .grid-container {
     display: flex;
     width: 600px;
@@ -83,7 +96,6 @@ main {
     margin: 0;
     padding: 0;
 }
-
 
 footer {
     background-color: #96B6C5;

@@ -6,6 +6,8 @@ const colourPicker = document.getElementById("colour-picker");
 const colouredTile = document.querySelector(".coloured-tile");
 const colourFillButton = document.querySelector(".colour-fill-button");
 const rainbowFillButton = document.querySelector(".rainbow-fill-button");
+const buttons = document.querySelectorAll(".colour-fill-button, .rainbow-fill-button, .clear-button");
+
 
 
 function parseGrid (gridSize) {
@@ -61,6 +63,14 @@ function fillTiles(e, tileColour) {
     }
 }
 
+function toggleButtonHover(e, button) {
+    if (e.type === "mouseover") {
+        button.classList.add("button-hover");
+    } else if (e.type === "mouseout") {
+        button.classList.remove("button-hover");
+    }
+}
+
 
 
 let gridSize = sliderInput.value;
@@ -69,12 +79,17 @@ createGrid(gridWidth, gridSize);
 
 
 let fillMode = "colour";
+colourFillButton.style.backgroundColor = "#EEE0C9";
 colourFillButton.addEventListener("click", function() {
     fillMode = "colour";
+    colourFillButton.style.backgroundColor = "#EEE0C9";
+    rainbowFillButton.style.backgroundColor = "#F1F0E8";
 })
 
 rainbowFillButton.addEventListener("click", function() {
     fillMode = "rainbow";
+    rainbowFillButton.style.backgroundColor = "#EEE0C9";
+    colourFillButton.style.backgroundColor = "#F1F0E8";
 })
 
 clearButton.addEventListener("click", function() {
@@ -86,6 +101,15 @@ sliderInput.addEventListener("input", function() {
     resetGrid(gridWidth, gridSize);
 });
 
+buttons.forEach(button => {
+    button.addEventListener("mouseover", function(e) {
+        toggleButtonHover(e, button);
+    })
+
+    button.addEventListener("mouseout", function(e) {
+        toggleButtonHover(e, button);
+    })
+})
 
 let tileColour = "#000000";
 colourPicker.addEventListener("input", function() {
