@@ -2,13 +2,15 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #ADC4CE;
-    font-family: "Chivo", sans-serif;
     color: #F1F0E8;
+    font-family: "Chivo", sans-serif;
+    margin: 0;
+    min-height:  100vh;
 }
 
 header {
     text-align: center;
-    font-size: 46px;
+    font-size: 42px;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -32,17 +34,20 @@ main {
     align-items: center;
     justify-content: center;
     width: 200px;
-    gap: 25px;
+    gap: 15px;
 }
 
 .clear-button {
     width: 150px;
     height: 40px;
     background-color: #F1F0E8;
-    border-radius: 15px;
+    border-radius: 7px;
     color: #ADC4CE;
     font-size: 20px;
-    font-weight: bold;
+}
+
+.slider-container {
+    margin-top: 15px;
 }
 
 .slider {
@@ -77,4 +82,17 @@ main {
 
 .black-tile {
     background-color: black;
+}
+
+footer {
+    background-color: #96B6C5;
+    bottom: 0px;
+    width: 100%;
+
+    margin: 0;
+    margin-top: auto;
+}
+
+.footer-text {
+    text-align: center;
 }
