@@ -1,8 +1,9 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: #e1dbd6;
+    background-color: #ADC4CE;
     font-family: "Chivo", sans-serif;
+    color: #F1F0E8;
 }
 
 header {
@@ -31,19 +32,36 @@ main {
     align-items: center;
     justify-content: center;
     width: 200px;
+    gap: 25px;
 }
 
 .clear-button {
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 40px;
+    background-color: #F1F0E8;
+    border-radius: 15px;
+    color: #ADC4CE;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.slider {
+    width: 150px;
+}
+
+.slider-text {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .grid-container {
     display: flex;
-    width: 750px;
-    height: 750px;
+    width: 600px;
+    height: 600px;
     border-style: solid;
-    border-width: 3px;
+    border-width: 5px;
+    border-color: black;
     background-color: white;
 }
 
