@@ -6,8 +6,14 @@ body {
 
 header {
     text-align: center;
-    font-size: 32px;
+    font-size: 46px;
     font-family: "Chivo", sans-serif;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin: 0;
 }
 
 main {
@@ -29,8 +35,8 @@ main {
 
 .grid-container {
     display: flex;
-    width: 600px;
-    height: 600px;
+    width: 750px;
+    height: 750px;
     border-style: solid;
     border-width: 3px;
     background-color: white;
