@@ -15,4 +15,4 @@ If you're feeling cheeky, select the ```Rainbow Fill``` option to use random col
 3. Manipulate the DOM using Javascript.
 
 ## View the Webpage
-View the etch-a-sketch webpage at: https://hojinchang.github.io/etch-a-sketch/
+View the etch-a-sketch webpage [here](https://hojinchang.github.io/etch-a-sketch/).
